@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.0.6",
     "expo": "^35.0.0",
     "react": "16.8.3",
     "react-dom": "16.8.3",
@@ -22,7 +23,8 @@
     "redux": "^4.0.4"
   },
   "devDependencies": {
-    "babel-preset-expo": "^7.0.0"
+    "babel-preset-expo": "^7.0.0",
+    "redux-devtools-extension": "^2.13.8"
   },
   "private": true
 }
