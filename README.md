@@ -20,9 +20,3 @@ To start Expo use:
    ```
    npm start
    ```
-   
-To enter the application you can use:
-
-   > E-Mail: test@test.com   
-   > Password: password
-  
