@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading';
 import * as Font from 'expo-font';
 import ReduxThunk from 'redux-thunk';
 
@@ -30,9 +30,13 @@ const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 export default function App() {
   const [fontLoaded, setFontLoaded] = useState(false);
   if (!fontLoaded) {
-    return <AppLoading startAsync={fetchFonts} onFinish={() => {
-      setFontLoaded(true);
-    }} />
+    return <AppLoading 
+      startAsync={fetchFonts} 
+      onFinish={() => {
+        setFontLoaded(true);
+      }} 
+      onError={(err) => console.log(err)}
+    />
   }
   return (
     <Provider store={store}>
