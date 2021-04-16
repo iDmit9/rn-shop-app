@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, Button, Platform, Alert, ActivityIndicator } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
@@ -89,7 +89,7 @@ const UserProductsScreen = props => {
    )
 };
 
-UserProductsScreen.navigationOptions = navData => {
+export const screenOptions = navData => {
    return {
       headerTitle: 'YourProducts',
       headerLeft: () => (

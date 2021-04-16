@@ -8,9 +8,7 @@ import Card from '../../components/UI/Card';
 import * as cartActions from '../../store/actions/cart';
 import * as ordersActions from '../../store/actions/orders';
 
-
-
-const CartScreen = props => {
+const CartScreen = () => {
    const [isLoading, setIsLoading] = useState(false);
 
    const cartTotalAmount = useSelector(state => state.cart.totalAmount);
@@ -26,7 +24,7 @@ const CartScreen = props => {
          })
       }
       return transformedCartItems.sort((a, b) =>
-         a.productId > b.productId ? 1 : -1 //если включать в {} то сортировка не работает  
+         a.productId > b.productId ? 1 : -1   
       );
    });
 
@@ -76,7 +74,7 @@ const CartScreen = props => {
    )
 };
 
-CartScreen.navigationOptions = {
+export const screenOptions  = {
    headerTitle: 'Your Cart'
 }
 

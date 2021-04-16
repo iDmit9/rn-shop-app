@@ -8,7 +8,7 @@ import OrderItem from '../../components/shop/OrderItem';
 import * as ordersActions from '../../store/actions/orders';
 import Colors from '../../constants/Colors';
 
-const OrdersScreen = props => {
+const OrdersScreen = () => {
    const [isLoading, setIsLoading] = useState(false);
    const orders = useSelector(state => state.orders.orders);
    const dispatch = useDispatch();
@@ -49,7 +49,7 @@ const OrdersScreen = props => {
    />
 };
 
-OrdersScreen.navigationOptions = navData => {
+export const screenOptions = navData => {
    return {
       headerTitle: 'Your Orders',
       headerLeft: () => (
